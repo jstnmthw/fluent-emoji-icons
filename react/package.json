@@ -1,0 +1,45 @@
+{
+  "name": "react-fluentui-emoji-slim",
+  "license": "MIT",
+  "version": "0.2.1",
+  "description": "Fluent Emoji SVG icons for UI react development.",
+  "homepage": "https://github.com/jstnmthw/fluentui-emoji-icons#readme",
+  "keywords": [
+    "FluentUI",
+    "Icons",
+    "React",
+    "JS",
+    "JavaScript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstnmthw/fluentui-emoji-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jstnmthw/fluentui-emoji-icons/issues"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.esm.js",
+      "require": "./index.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./icons": {
+      "types": "./icons/index.d.ts",
+      "import": "./icons/esm/index.js",
+      "require": "./icons/index.js"
+    },
+    "./icons/*": {
+      "types": "./icons/*.d.ts",
+      "import": "./icons/esm/*.js",
+      "require": "./icons/*.js"
+    },
+    "./icons/*.js": {
+      "types": "./icons/*.d.ts",
+      "import": "./icons/esm/*.js",
+      "require": "./icons/*.js"
+    }
+  }
+}
