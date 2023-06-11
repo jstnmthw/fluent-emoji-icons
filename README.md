@@ -7,7 +7,7 @@
 </p>
 
 <p>
-    <a href="https://github.com/jstnmthw/fluentui-emoji-icons"><img src="https://img.shields.io/npm/v/react-fluentui-emoji-slim" alt="Latest Release"></a>
+    <a href="https://github.com/jstnmthw/fluentui-emoji-icons"><img src="https://img.shields.io/npm/v/@jstnmthw/react-fluentui-emoji" alt="Latest Release"></a>
     <a href="https://github.com/jstnmthw/fluentui-emoji-icons/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/react-fluentui-emoji-slim" alt="License"></a>
 </p>
 
