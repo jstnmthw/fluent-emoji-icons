@@ -6,11 +6,9 @@ async function getIcons() {
   let files = await fs.readdir("./src/icons", "utf8");
   return Promise.all(
     files.map(async (file) => {
-      return {
-        component: `${camelcase(file.replace(/\.svg$/, ""), {
-          pascalCase: true,
-        })}Icon`,
-      };
+      return `<${camelcase(file.replace(/\.svg$/, ""), {
+        pascalCase: true,
+      })}Icon className="w-6 h-6" />`;
     })
   );
 }
@@ -27,7 +25,7 @@ async function ensureWriteJson(file, json) {
 async function main() {
   let icons = await getIcons();
 
-  await ensureWriteJson(`./list.json`, icons);
+  await ensureWrite(`./list.json`, icons);
   console.log(icons);
 }
 
