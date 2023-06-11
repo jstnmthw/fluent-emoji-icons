@@ -1,7 +1,7 @@
 {
-  "name": "react-fluentui-emoji-slim",
+  "name": "@jstnmthw/react-fluentui-emoji",
   "license": "MIT",
-  "version": "0.2.1",
+  "version": "0.2.5",
   "description": "Fluent Emoji SVG icons for UI react development.",
   "homepage": "https://github.com/jstnmthw/fluentui-emoji-icons#readme",
   "keywords": [

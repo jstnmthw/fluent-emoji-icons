@@ -9,16 +9,12 @@ let transformedSVG = {
     const svgCode = await transform(
       svg,
       {
-        ref: true,
-        memo: true,
+        ref: false,
+        memo: false,
         icon: true,
         titleProp: true,
-        typescript: true,
-        plugins: [
-          "@svgr/plugin-svgo",
-          "@svgr/plugin-jsx",
-          "@svgr/plugin-prettier",
-        ],
+        typescript: false,
+        plugins: ["@svgr/plugin-jsx", "@svgr/plugin-prettier"],
       },
       { componentName: componentName }
     );
