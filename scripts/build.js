@@ -9,11 +9,11 @@ let transformedSVG = {
     const svgCode = await transform(
       svg,
       {
-        ref: true,
-        memo: true,
+        ref: false,
+        memo: false,
         icon: true,
         titleProp: true,
-        typescript: true,
+        typescript: false,
         plugins: [
           "@svgr/plugin-svgo",
           "@svgr/plugin-jsx",
@@ -70,10 +70,10 @@ async function buildIcons(packageName, style, format) {
 }
 
 async function getIcons({ format }) {
-  let files = await fs.readdir("./src/icons", "utf8");
+  let files = await fs.readdir("./src/icons-test", "utf8");
   return Promise.all(
     files.map(async (file) => {
-      const svgFile = await fs.readFile(`./src/icons/${file}`, "utf8");
+      const svgFile = await fs.readFile(`./src/icons-test/${file}`, "utf8");
       return {
         svg: svgFile,
         componentName: `${camelcase(file.replace(/\.svg$/, ""), {
