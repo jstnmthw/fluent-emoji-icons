@@ -2,13 +2,18 @@ import { promises as fs } from "fs";
 import camelcase from "camelcase";
 import { dirname } from "path";
 
-async function getIcons() {
+async function getIcons(plain) {
   let files = await fs.readdir("./src/icons", "utf8");
   return Promise.all(
     files.map(async (file) => {
-      return `<${camelcase(file.replace(/\.svg$/, ""), {
-        pascalCase: true,
-      })}Icon className="w-6 h-6" />`;
+      return plain
+        ? `${camelcase(file.replace(/\.svg$/, ""), {
+            pascalCase: true,
+          })}Icon,
+          `
+        : `<${camelcase(file.replace(/\.svg$/, ""), {
+            pascalCase: true,
+          })}Icon className="w-6 h-6" />`;
     })
   );
 }
@@ -23,9 +28,9 @@ async function ensureWriteJson(file, json) {
 }
 
 async function main() {
-  let icons = await getIcons();
+  let icons = await getIcons(true);
 
-  await ensureWrite(`./list.json`, icons);
+  await ensureWrite(`./plain.json`, icons);
   console.log(icons);
 }
 
