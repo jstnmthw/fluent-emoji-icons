@@ -95,7 +95,7 @@ function exportAll(icons, format, includeExtension = true) {
           : ".jsx"
         : "";
       if (format === "esm") {
-        return `export { default as ${componentName} } from "./${componentName}${extension}"`;
+        return `export { ${componentName} as ${componentName} } from "./${componentName}${extension}"`;
       }
       return `module.exports.${componentName} = require("./${componentName}${extension}")`;
     })

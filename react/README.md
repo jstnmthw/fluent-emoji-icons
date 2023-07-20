@@ -34,7 +34,7 @@ The quickest way to use these icons is to simply copy the source for the icon yo
 First, install `react-fluentui-emoji-slim` from npm:
 
 ```sh
-npm install react-fluentui-emoji-slim
+npm install @jstnmthw/react-fluentui-emoji
 ```
 
 Now each icon can be imported individually as a React component:
