@@ -18,6 +18,7 @@ let transformedSVG = {
       },
       { componentName: componentName }
     );
+
     if (format === "esm") {
       return svgCode;
     }
@@ -95,7 +96,7 @@ function exportAll(icons, format, includeExtension = true) {
           : ".jsx"
         : "";
       if (format === "esm") {
-        return `export { ${componentName} as ${componentName} } from "./${componentName}${extension}"`;
+        return `export { default as ${componentName} } from "./${componentName}${extension}"`;
       }
       return `module.exports.${componentName} = require("./${componentName}${extension}")`;
     })
@@ -127,13 +128,13 @@ async function buildExports(styles) {
     };
     pkg[`./${style}/*`] = {
       types: `./${style}/*.d.ts`,
-      import: `./${style}/esm/*.js`,
-      require: `./${style}/*.js`,
+      import: `./${style}/esm/*.tsx`,
+      require: `./${style}/*.jsx`,
     };
     pkg[`./${style}/*.js`] = {
       types: `./${style}/*.d.ts`,
-      import: `./${style}/esm/*.js`,
-      require: `./${style}/*.js`,
+      import: `./${style}/esm/*.tsx`,
+      require: `./${style}/*.jsx`,
     };
   }
 

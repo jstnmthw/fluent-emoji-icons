@@ -1,7 +1,7 @@
 {
   "name": "@jstnmthw/react-fluentui-emoji",
   "license": "MIT",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Fluent Emoji SVG icons for UI react development.",
   "homepage": "https://github.com/jstnmthw/fluentui-emoji-icons#readme",
   "keywords": [
@@ -33,13 +33,13 @@
     },
     "./icons/*": {
       "types": "./icons/*.d.ts",
-      "import": "./icons/esm/*.js",
-      "require": "./icons/*.js"
+      "import": "./icons/esm/*.tsx",
+      "require": "./icons/*.jsx"
     },
     "./icons/*.js": {
       "types": "./icons/*.d.ts",
-      "import": "./icons/esm/*.js",
-      "require": "./icons/*.js"
+      "import": "./icons/esm/*.tsx",
+      "require": "./icons/*.jsx"
     }
   }
 }
