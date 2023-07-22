@@ -36,7 +36,7 @@
       "import": "./icons/esm/*.tsx",
       "require": "./icons/*.jsx"
     },
-    "./icons/*.js": {
+    "./icons/*.jsx": {
       "types": "./icons/*.d.ts",
       "import": "./icons/esm/*.tsx",
       "require": "./icons/*.jsx"
